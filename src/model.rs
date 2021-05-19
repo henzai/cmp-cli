@@ -24,6 +24,7 @@ pub enum Ticker {
     LTC,
     XLM,
     ETC,
+    DOT,
 }
 
 #[derive(Debug, Clone, Copy, Serialize, Deserialize)]
