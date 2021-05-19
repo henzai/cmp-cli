@@ -15,7 +15,7 @@ struct Status {
     elapsed: u32,
     credit_count: u32,
 }
-#[derive(PartialEq, Eq, Hash, Debug, Serialize, Deserialize)]
+#[derive(Clone, Copy, PartialEq, Eq, PartialOrd, Hash, Debug, Serialize, Deserialize)]
 pub enum Ticker {
     BTC,
     ETH,
@@ -24,14 +24,15 @@ pub enum Ticker {
     LTC,
     XLM,
     ETC,
+    DOT,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Copy, Serialize, Deserialize)]
 pub enum Quote {
     USD { price: f64, market_cap: f64 },
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct Data {
     id: u32,
     name: String,
