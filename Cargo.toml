@@ -8,5 +8,5 @@ edition = "2018"
 
 [dependencies]
 async-std = { version = "1.9.0", features = ["attributes"]}
-serde = "1.0.126"
+serde =  { version = "1.0.126", features = ["derive"] }
 surf = "2.2.0"
